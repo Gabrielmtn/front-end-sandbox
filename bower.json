@@ -12,17 +12,17 @@
     "tests"
   ],
   "devDependencies": {
-    "angular-mocks": "~1.4.7",
+    "angular-mocks": "~1.5.8",
     "bardjs": "~0.1.8"
   },
   "dependencies": {
-    "angular": "~1.4.7",
-    "angular-animate": "~1.4.7",
-    "angular-bootstrap": "~0.14.0",
-    "angular-sanitize": "~1.4.7",
-    "angular-toastr": "~1.5.0",
-    "angular-ui-router": "~0.2.15",
-    "bootstrap-sass": "~3.3.4",
-    "lodash": "~3.10.1"
+    "angular": "~1.5.8",
+    "angular-animate": "~1.5.8",
+    "angular-bootstrap": "~2.1.2",
+    "angular-sanitize": "~1.5.8",
+    "angular-toastr": "~2.1.1",
+    "angular-ui-router": "~0.3.1",
+    "bootstrap-sass": "~3.3.7",
+    "lodash": "~4.15.0"
   }
 }
