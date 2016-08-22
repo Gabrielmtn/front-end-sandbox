@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "author": "Mitul Patel",
   "license": "MIT",
+  "repository": "https://github.com/rainbowshrimp/front-end-sandbox",
   "scripts": {
     "init": "npm install",
     "install": "bower install",
