@@ -2,31 +2,35 @@
 This template provides a starter project that implements best practices in coding, building and testing AngularJS applications. Features include:
 - A well-organized component hierarchy starting from `approot`. Components are implemented using directives (no dangling controllers). This provides a good architectural direction until Angular 2.0 becomes available.
 - Follows AngularJS style guidelines (e.g. `controller as` syntax).
-- Uses [AngularUI Router](https://github.com/angular-ui/ui-router) for flexible routing and nested views.
+- Uses [Angular UI-Router](https://github.com/angular-ui/ui-router) for flexible routing and nested views.
 - Uses [Angular Bootstrap](http://angular-ui.github.io/bootstrap/) to remove dependencies on jQuery and Bootstrap’s JavaScript.
 - Provides logging and exception handling frameworks with toaster notifications.
-- Provides a Gulp based build system – code changes are reflected in the browser immediately.
+- Provides a Gulp-based build system – code changes are reflected in the browser immediately.
 - Uses Karma, Mocha and Chai for testing.
 
 ## Requirements
 
 - Install Node
-    - on OSX, install [home brew](http://brew.sh/) and type `brew install node`
+    - on OSX, install [homebrew](http://brew.sh/) and type `brew install node`
     - on Windows, use the installer available at [nodejs.org](http://nodejs.org/)
     - On OSX you can alleviate the need to run as sudo by [following John Papa's instructions](http://jpapa.me/nomoresudo)
 - Open terminal
 - Type `npm install -g node-inspector bower gulp`
 
 ## Quick Start
+
 Clone this repo and run the content locally:
+
 ```bash
 $ npm install
 $ gulp serve-dev
 ```
+
 - `npm install` will install the required node libraries under `node_modules` and then call `bower install` which will install the required client-side libraries under `bower_components`.
 - `gulp serve-dev` will serve up the Angular application in a browser window. It is designed for an efficient development process. As you make changes to the code, the browser will update to reflect the changes immediately.
 
 When you are ready to build the application for production, run the following command:
+
 ```bash
 $ gulp serve-build
 ```
@@ -53,9 +57,9 @@ The folder structure is somewhat simplified and flatter compared to John Papa's 
 
 - `node_modules:` Node.js modules downloaded by `npm install` (do not check in)
 
-- `src:` contains all the client source files including HTML, styles (in SASS format), JavaScript and images
+- `src:` contains all the client source files including HTML, styles (in Sass format), JavaScript and images
 
-- `test:` contains client tests. This folder is intentionally kept separate from client source because I expect many different types of tests in this folder (unit, integration, acceptance). On real projects, the number of test files can easily exceed the number of source files, hence I like to keep the clutter away from the real source - just my preference!
+- `test:` contains client tests. This folder is intentionally kept separate from client source because I expect many different types of tests in this folder (unit, integration, acceptance). In production projects, the number of test files can easily exceed the number of source files, so I like to keep the clutter away from the real source - just my preference!
 
 ### Source Folder Structure
 
@@ -76,7 +80,7 @@ The `src` folder contains only the source for the AngularJS client application. 
 - `app.scss`
 - `app.module.js`
 
-Below this level you will find various folders that arrange the application's functionality into logical modules.
+Below this level you will find several directories that arrange the application's functionality into logical modules.
 
 - `framework:` Container for reusable services such as logging, exception handling, routing, security, local storage etc. These services are expected to work out-of-the-box without any changes for most applications. The template provides sample implementations for the first three. (This folder is called `blocks` in the gulp-patterns project.)
 
@@ -86,9 +90,9 @@ Below this level you will find various folders that arrange the application's fu
 
 - `images:` Images used in the application.
 
-## Tasks
+## Gulp Tasks
 
-### Task Listing
+### List Tasks
 
 - `gulp help`
 
@@ -154,7 +158,7 @@ Below this level you will find various folders that arrange the application's fu
 
 - `gulp styles`
 
-    Compile less files to CSS, add vendor prefixes, and copy to the build folder
+    Compile Sass files to CSS, add vendor prefixes, and copy to the build folder
 
 ### Angular HTML Templates
 
@@ -170,13 +174,13 @@ Below this level you will find various folders that arrange the application's fu
 
 - `gulp serve-dev`
 
-    Serves the development code and launches it in a browser. The goal of building for development is to do it as fast as possible, to keep development moving efficiently. This task serves all code from the source folders and compiles less to css in a temp folder.
+    Serves the development code and launches it in a browser. To keep development moving efficiently, development builds should occur as quickly as possible. This task aids that goal by serving all code from the source folders and compiling Sass to CSS in a temporary folder.
 
 ### Building Production Code
 
 - `gulp html`
 
-    Optimize all javascript and styles, move to a build folder, and inject them into the new index.html
+    Optimize all javascript and styles, move to a build folder, and inject them into the new `index.html`
 
 - `gulp build`
 
